@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 
-type User = {
-  id: number;
-  name: String;
-};
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [user, setUser] = useState<null | User>(null);
+  const [user, setUser] = useState<string>("");
+  const [userNmae, setUserName] = useState("");
   const handleIncremnet = () => {
     setCount((ps) => ps + 1);
   };
@@ -14,9 +11,12 @@ const Counter = () => {
     setCount((ps) => ps - 1);
   };
 
-  const handleAddUser = () => {
-    setUser({ id: 1, name: "Ujjal" });
-    console.log(user);
+  const handleAddUser = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setUser(userNmae);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.target.value);
   };
   return (
     <div>
@@ -37,10 +37,20 @@ const Counter = () => {
         -
       </button>
 
+      <div>
+        <h2>Create New User</h2>
+        <input
+          type="text"
+          placeholder="Enter the User Name"
+          value={userNmae}
+          onChange={handleChange}
+        />
+      </div>
+
       <button type="submit" onClick={handleAddUser}>
         Add user
       </button>
-      {user?.name}
+      <h1>{user}</h1>
     </div>
   );
 };
