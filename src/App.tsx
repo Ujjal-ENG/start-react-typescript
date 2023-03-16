@@ -1,18 +1,11 @@
 import "./App.css";
-import User from "./components/User";
-
-const user1 = {
-  name: "Ujjal Roy",
-  age: 24,
-  isRegistered: false,
-  lang: ["Bangla", "English", "Hindi"],
-};
+import DataFetch from "./components/DataFetch";
 
 function App() {
   return (
     <div className="App">
-      <h1>User Management</h1>
-      <User user={user1} />
+      <h3>User Management</h3>
+      <DataFetch status="error" />
     </div>
   );
 }
