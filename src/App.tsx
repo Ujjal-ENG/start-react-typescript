@@ -1,12 +1,18 @@
 import "./App.css";
 import User from "./components/User";
 
+const user1 = {
+  name: "Ujjal Roy",
+  age: 24,
+  isRegistered: false,
+  lang: ["Bangla", "English", "Hindi"],
+};
+
 function App() {
   return (
     <div className="App">
       <h1>User Management</h1>
-      <User name="Ujjal Kumar Roy" age={22} isRegistered={false} />
-      <User name="Susmita Roy" age={14} isRegistered={true} />
+      <User user={user1} />
     </div>
   );
 }
