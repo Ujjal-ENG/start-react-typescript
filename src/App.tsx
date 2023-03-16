@@ -1,11 +1,11 @@
 import "./App.css";
-import DataFetch from "./components/DataFetch";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div className="App">
-      <h3>User Management</h3>
-      <DataFetch status="error" />
+      <h3>Children Props</h3>
+      <Button>Click Me</Button>
     </div>
   );
 }
