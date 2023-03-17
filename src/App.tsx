@@ -1,5 +1,5 @@
 import "./App.css";
-import Counter from "./USE-STATE-HOOKS/Counter";
+import Counter from "./USE-REDUCER-HOOKS/Counter";
 
 function App() {
   return (
